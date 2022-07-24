@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #efefef;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: efefef;
+    padding: 40px 0;
+}
+.slide-content {
+  margin: 0 40px;
+  /* padding: 45px 20px; */
+  background-color: efefef;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card {
+  border-radius: 25px;
+  background-color: #fff;
+}
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  row-gap: 5px;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0000c5;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::after,
+.overlay::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #0000c5;
+}
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
+}
+
+.overlay::before {
+}
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  /* background: #fff; */
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  padding: 3px;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #0000c5;
+  border-radius: 6px;
+  margin: 14px;
+  transition: all 0.3 ease;
+}
+.button:hover {
+  background-color: #b50030;
+}
+.swiper-navbtn{
+    color: #0000c5;
+    opacity: 0.5;
+    transition: color 0.3s ease;
+}
+.swiper-navbtn:hover{
+    color: #0000c5;
+    opacity: 1;
+
+
+}
+
+.swiper-navbtn::after,.swiper-navbtn::before{
+    font-size: 40px;
+}
+.swiper-button-next{
+right: 0;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-pagination.bullet{
+    background-color: #0000c5;
+    opacity: 1;
+}
+.swiper-pagination.bullet.active{
+     background-color: #0000c5;
+}
+@media screen and (max-width:768px) {
+    
+    .swiper-navbtn{
+        display: none;
+    }
+    .slide-content{
+        margin: 0 10px;
+    }
+}
